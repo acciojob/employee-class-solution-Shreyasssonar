@@ -19,3 +19,11 @@ Manager.prototype.giveRaise = function(amount) {
   Employee.prototype.giveRaise.call(this, amount);
   console.log(`New salary for ${this.name} in ${this.department}: ${this.salary}`);
 }
+
+// Sample Usage
+let employee = new Employee("John Doe", 50000);
+employee.giveRaise(5000);
+console.log(employee.salary); // Output: 55000
+
+let manager = new Manager("Jane Smith", 80000, "Sales");
+manager.giveRaise(10000); // Output: New salary for Jane Smith in Sales: 90000
